@@ -67,8 +67,13 @@ router.get('/employee/get',async(req,res)=>{
     }
    })
 
+   /// get all  employee //
+   router.get('/employee/get',auth,(req,res)=>{
+       res.send(req.body)
+   })
+
 // get projets ///
-router.get('/projects',auth,async(req,res)=>{
+router.get('/projects',async(req,res)=>{
     try {
         let limit = 10;
        let page=0;
