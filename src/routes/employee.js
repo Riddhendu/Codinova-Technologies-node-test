@@ -68,7 +68,7 @@ router.get('/employee/get',async(req,res)=>{
    })
 
 // get projets ///
-router.get('/projects',async(req,res)=>{
+router.get('/projects',auth,async(req,res)=>{
     try {
         let limit = 10;
        let page=0;
